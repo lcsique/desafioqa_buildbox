@@ -1,0 +1,25 @@
+{
+  "name": "desafioqa_buildbox",
+  "version": "1.0.0",
+  "description": "teste qa",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cyress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcsique/desafioqa_buildbox.git"
+  },
+  "keywords": [
+    "qa"
+  ],
+  "author": "Lucas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcsique/desafioqa_buildbox/issues"
+  },
+  "homepage": "https://github.com/lcsique/desafioqa_buildbox#readme",
+  "dependencies": {
+    "cypress": "^10.6.0"
+  }
+}
