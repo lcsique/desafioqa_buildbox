@@ -42,6 +42,15 @@ describe('Cadastro de usuários',() => {
         cy.contains('.alert-error', 'Oops! Email com formato inválido.').should('be.visible');
     })
 
+    /*/Teste para verificar mensagem de alerta do campo email preenchido sem colocar o "@".
+    it.only('verifica mensagem de alerta do campo Email preenchido incorretamente', ()=>{
+        cy.contains('a', 'Cadastre-se para fazer entregas').click();
+        //cy.get('input[name="email"]').type('jaotste');
+        cy.get('input[name="email"]')
+        .trigger('invalid');
+        //cy.contains('.button-success', 'Cadastre-se para fazer entregas').click();
+    })*/
+
     //Teste para verificar mensagem de alerta do campo Whatsapp preenchido incorretamente.
     it('verifica mensagem de alerta do campo Whatsapp preenchido incorretamente', ()=>{
         cy.contains('a', 'Cadastre-se para fazer entregas').click();
@@ -67,15 +76,8 @@ describe('Cadastro de usuários',() => {
         cy.contains('.alert-error', 'Oops! Selecione apenas um método de entrega').should('be.visible');
     })
 
-    it('upload de foto', ()=>{
-        const p = 'vader.png';
-        cy.contains('a', 'Cadastre-se para fazer entregas').click();
-        cy.get('input[type="file"]').attachFile('vader.png');
-        cy.contains('.button-success', 'Cadastre-se para fazer entregas').click();
-    })
-
     //Teste para cadastrar usuário válido.
-    it.only('cadastrar um usuário válido', ()=>{
+    it('cadastrar um usuário válido', ()=>{
         cy.contains('a', 'Cadastre-se para fazer entregas').click();
         cy.get('input[name="name"]').type('João');
         cy.get('input[name="cpf"]').type('12345678910');
