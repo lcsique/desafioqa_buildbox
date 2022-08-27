@@ -21,5 +21,8 @@
   "homepage": "https://github.com/lcsique/desafioqa_buildbox#readme",
   "dependencies": {
     "cypress": "^10.6.0"
+  },
+  "devDependencies": {
+    "cypress-file-upload": "^5.0.8"
   }
 }
